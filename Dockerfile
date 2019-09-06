@@ -7,4 +7,4 @@ RUN apk add git-daemon && \
 
 WORKDIR /srv
 
-ENTRYPOINT ["/usr/libexec/git-core/git-daemon", "--export-all", "--base-path=/srv/git", "--verbose", "--informative-errors", "--enable=receive-pack", "/srv/git"]
+ENTRYPOINT ["/usr/libexec/git-core/git-daemon", "--export-all", "--base-path=/srv/git", "--verbose", "--informative-errors", "--enable=receive-pack", "--listen=0.0.0.0", "/srv/git"]
